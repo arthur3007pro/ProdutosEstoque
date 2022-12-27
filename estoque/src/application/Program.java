@@ -14,16 +14,28 @@ public class Program {
 		
 		Product product = new Product();
 		System.out.println("Enter product data: ");
-		System.out.println("Name: ");
+		System.out.print("Name: ");
 		product.name = sc.nextLine();
-		System.out.println("Price: ");
+		System.out.print("Price: ");
 		product.price = sc.nextDouble();
-		System.out.println("Quantity in stock: ");
+		System.out.print("Quantity in stock: ");
 		product.quantity = sc.nextInt();
 		
-		System.out.println(product.name + ", " + product.price + ", " + product.quantity);
+		System.out.println();
+		System.out.println("Product data: " + product);
 		
+		System.out.println();
+		System.out.println("Enter the number of products to be added in stock: ");
+		int quantity = sc.nextInt();
+		product.addProduct(quantity);
 		
+		System.out.println();
+		System.out.println("Enter the number of products to be removed from stock: ");
+		quantity = sc.nextInt();
+		product.addProduct(quantity);
+		
+		System.out.println();
+		System.out.println("Updated data: " + product);
 		
 		sc.close();
 	}
